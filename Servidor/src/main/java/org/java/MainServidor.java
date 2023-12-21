@@ -1,6 +1,6 @@
 package org.java;
 
-import org.java.servidor.Servidor;
+import org.java.server.Servidor;
 
 import java.io.IOException;
 

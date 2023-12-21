@@ -1,4 +1,4 @@
-package org.java.servidor;
+package org.java.server;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
