@@ -1,4 +1,4 @@
-package org.java.cliente;
+package org.java.client;
 
 import java.net.*;
 import java.io.*;
@@ -6,7 +6,7 @@ import java.io.*;
 public class ClientJavaPoint {
     public static void main(String args[])throws Exception{
 
-        Socket s=new Socket("localhost",3333);
+        Socket s=new Socket("localhost",3133);
 
         DataInputStream din=new DataInputStream(s.getInputStream());
 

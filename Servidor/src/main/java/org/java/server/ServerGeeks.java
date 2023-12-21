@@ -10,6 +10,12 @@ public class ServerGeeks {
     private ServerSocket server = null;
     private DataInputStream in =  null;
 
+    private DataInputStream inServer =  null;
+
+    private DataOutputStream out = null;
+
+    private DataOutputStream outServer = null;
+
     // constructor with port
     public ServerGeeks(int port)
     {
@@ -24,11 +30,18 @@ public class ServerGeeks {
             socket = server.accept();
             System.out.println("Client accepted");
 
+
+
+
             // takes input from the client socket
             in = new DataInputStream(
                     new BufferedInputStream(socket.getInputStream()));
 
             String line = "";
+
+            inServer = new DataInputStream(System.in);
+
+            outServer = new DataOutputStream(socket.getOutputStream());
 
             // reads message from client until "Over" is sent
             while (!line.equals("Over"))
@@ -36,8 +49,14 @@ public class ServerGeeks {
                 try
                 {
                     line = in.readUTF();
-                    System.out.println(line);
+                    System.out.println( "****" + line);
+/*
+                    in = new DataInputStream(System.in);
 
+                    System.out.println(in.toString());
+                    System.out.println(in.readUTF());
+                    out = new DataOutputStream(socket.getOutputStream());
+*/
                 }
                 catch(IOException i)
                 {

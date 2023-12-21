@@ -1,4 +1,4 @@
-package org.java.cliente;
+package org.java.client;
 
 // A Java program for a Client
 import java.io.*;
@@ -15,8 +15,7 @@ public class ClientGeeks{
     private DataOutputStream out = null;
 
     // constructor to put ip address and port
-    public ClientGeeks(String address, int port)
-    {
+    public ClientGeeks(String address, int port){
         // establish a connection
         try {
             socket = new Socket(address, port);
@@ -69,6 +68,7 @@ public class ClientGeeks{
 
     public static void main(String args[])
     {
+
         ClientGeeks client = new ClientGeeks("127.0.0.1", 5000);
     }
 }
