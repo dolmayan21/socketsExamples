@@ -32,8 +32,12 @@ public class Client2_0{
 
                 // Send the message to the server
                 out.println(message);
-
+                /*
                 if ("exit".equalsIgnoreCase(message)) {
+                    break;
+                }
+                */
+                if(message.contains("exit")){
                     break;
                 }
 
